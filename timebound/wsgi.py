@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "timebound.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "timebound.settings_production")
 from whitenoise.django import DjangoWhiteNoise
 
 application = get_wsgi_application()
