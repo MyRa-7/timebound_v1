@@ -1,11 +1,10 @@
 from django.shortcuts import render
+from timebound_v1.models import Thing
 
 # Create your views here.
 def index(request):
-	number = 6
-	# this is a new view
-	thing = "Thing name"
+	things = Thing.objects.all()
+	
 	return render(request, 'index.html', {
-			'number': number,
-			'thing': thing,
+			'things': things,
 		})

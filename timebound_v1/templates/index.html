@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
-{% load humanize %}
+
 {% block title %}
 	Homepage - {{block.super}}
 {% endblock title %}
 
 {% block content %}
-
-<h1>Hello There!</h1>
-<p>Let's get going!</p>
-<p>There are {{ number|apnumber }} dog{{number|pluralize}}!</p>
-
+	{% for thing in things%}
+	<h2>{{ thing.name }}</h2>
+	<p> {{ thing.description }} </p>
+	{% endfor %}
 {% endblock content %}
