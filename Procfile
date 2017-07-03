@@ -1,1 +1,1 @@
-web: waitress-serve --port= timebound.wsgi:application
+web: waitress-serve --port=$PORT timebound.wsgi:application
